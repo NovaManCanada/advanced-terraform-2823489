@@ -6,15 +6,15 @@ variable "aws_access_key" {}
 variable "aws_secret_key" {}
 
 variable "region" {
-  default = "us-east-2"
+  default = "us-east-1"
 }
 
 variable "vpc_cidr" {
-  default = "172.16.0.0/16"
+  default = "10.142.0.0/16"
 }
 
 variable "subnet1_cidr" {
-  default = "172.16.0.0/24"
+  default = "10.142.0.0/24"
 }
 
 variable "environment_list" {
@@ -182,4 +182,8 @@ data "aws_ami" "aws-linux" {
 # //////////////////////////////
 output "instance-dns" {
   value = aws_instance.nodejs1.public_dns
+}
+
+output "private-dns" {
+  value = aws_instance.nodejs1.private_dns
 }

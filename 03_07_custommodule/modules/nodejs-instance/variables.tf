@@ -9,11 +9,11 @@ variable instance_count {
 }
 
 variable "vpc_cidr" {
-  default = "172.16.0.0/16"
+  default = "10.142.0.0/16"
 }
 
 variable "subnet_cidr" {
-  default = "172.16.0.0/24"
+  default = "10.142.0.0/24"
 }
 
 variable environment_tags {
